@@ -1,12 +1,10 @@
 :root {
-  --website-bg-c: #e8e8e8;
-  --a-c: #0F1035;
-  --a-visited-c: #365486;
+  --website-bg-c: #e4e4e4;
+  --a-c: #0f1035;
+  --a-visited-c: #0f1035;
   --a-hover-c: #365486;
-  --default-button-c: #357b70 ;
-  --secondary-button-bg-c: #e0b354;
-  --secondary-button-c: #2b2b2b;
-  --grid-item-bg-c: #CACACA;
+  --default-button-c: #636363;
+  --grid-item-bg-c: #cacaca;
 }
 
 * {
@@ -58,7 +56,7 @@ button {
   text-decoration: none;
   /*adds spacing to the button (this will be discussed more in-depth later) */
   padding: 10px;
-  border-radius: 3px;
+  border-radius: 10px;
   /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 }
@@ -71,11 +69,6 @@ button:focus {
   opacity: 0.8;
 }
 
-.button__secondary {
-  background-color: var(--secondary-button-bg-c);
-  color: var(--secondary-button-c);
-}
-
 .navigation-list__item--active {
   text-decoration: none;
 }
@@ -84,14 +77,18 @@ button:focus {
   line-height: 1.5;
 }
 
-#call-to-action {
-  font-size: 1.2rem;
+h1 {
+  font-size: 45px;
+}
+
+.call-to-action {
+  font-size: 25px;
 }
 
 .profile__portrait {
   float: left;
   height: auto;
-  width: 250px;
+  width: 275px;
   margin-right: 40px;
   border-radius: 50%;
 }
@@ -149,7 +146,8 @@ button:focus {
   border-radius: 5px;
 }
 
-.button, button {
+.button,
+button {
   /* overwrites browser defaults and resets the border */
   border: none;
   display: inline-block;
@@ -163,7 +161,7 @@ button:focus {
   border-radius: 3px;
   /* width of the border, type, color */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  transition: opacity .5s;
+  transition: opacity 0.5s;
 }
 
 button:hover,
@@ -177,14 +175,13 @@ button:focus,
 }
 
 /* to align the about me page center */
-.about-body {
+.about-body,
+.contact-body,
+.work-body {
   text-align: center;
 }
 
-
-
-
-@media all and (max-width: 750px){
+@media all and (max-width: 750px) {
   .grid {
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
@@ -201,7 +198,7 @@ button:focus,
   }
 }
 
-@media all and (max-width: 500px){
+@media all and (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
   }
