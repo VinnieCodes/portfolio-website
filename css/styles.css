@@ -117,7 +117,7 @@ h1 {
 
 .page-header__item {
   flex: 0 1 200px;
-  border-radius: 5px;
+  border-radius: 10px;
   height: 60px;
 }
 
@@ -143,7 +143,7 @@ h1 {
 
 .grid__item {
   background-color: var(--grid-item-bg-c);
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .button,
@@ -158,9 +158,9 @@ button {
   color: white;
   text-decoration: none;
   padding: 10px;
-  border-radius: 3px;
+  border-radius: 10px;
   /* width of the border, type, color */
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 3px solid rgba(0, 0, 0, 0.3);
   transition: opacity 0.5s;
 }
 
@@ -251,4 +251,15 @@ button:focus,
 
 .cloud-back {
   animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+.projects {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+}
+
+.image {
+  height: 240px;
+  border-radius: 10px;
 }
