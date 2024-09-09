@@ -144,6 +144,12 @@ h1 {
 .grid__item {
   background-color: var(--grid-item-bg-c);
   border-radius: 10px;
+  transition: transform .2s ease ;
+}
+
+.grid__item:hover {
+  transform: scale(1.02);
+  opacity: 1;
 }
 
 .button,
@@ -179,6 +185,16 @@ button:focus,
 .contact-body,
 .work-body {
   text-align: center;
+}
+
+.FMOIcons {
+  margin: 5px;
+  transition: transform .2s ease ;
+}
+
+.FMOIcons:hover {
+  transform: scale(1.2);
+  opacity: 1;
 }
 
 @media all and (max-width: 750px) {
