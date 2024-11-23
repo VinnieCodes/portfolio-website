@@ -1,3 +1,4 @@
+/* Root Variables */
 :root {
   --website-bg-c: #e4e4e4;
   --a-c: #0f1035;
@@ -7,6 +8,7 @@
   --grid-item-bg-c: #cacaca;
 }
 
+/* Global Styles */
 * {
   box-sizing: border-box;
 }
@@ -29,54 +31,68 @@ a {
 }
 
 a:visited {
-  /* visited link */
   color: var(--a-visited-c);
 }
 
 a:hover,
 a:focus {
-  /* No underlining when hovering over a link */
   text-decoration: none;
   color: var(--a-hover-c);
 }
 
 a:active {
-  /* selected link */
   text-decoration: none;
 }
 
-button {
-  /* overwrites browser defaults and resets the border */
+button,
+.button {
   border: none;
-  /* takes the font from the outer container */
+  display: inline-block;
   font-family: inherit;
-  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
   background-color: var(--default-button-c);
   color: white;
   text-decoration: none;
-  /*adds spacing to the button (this will be discussed more in-depth later) */
   padding: 10px;
   border-radius: 10px;
-  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+  transition: transform .1s ease;
 }
 
+button:hover {
+  transform: scale(1.1);
+}
 
+/* Navigation */
+.navigation-list {
+  list-style-type: none;
+}
 
-.navigation-list__item--active {
-  text-decoration: none;
+.navigation-list li {
+  display: inline-block;
+  margin-left: 30px;
 }
 
 .navigation-list__item {
   line-height: 1.5;
 }
 
+.navigation-list__item--active {
+  text-decoration: none;
+}
+
+/* Headers */
 h1 {
   font-size: 45px;
 }
 
 .call-to-action {
   font-size: 25px;
+}
+
+/* Profile */
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .profile__portrait {
@@ -87,22 +103,7 @@ h1 {
   border-radius: 50%;
 }
 
-.page-footer {
-  clear: both;
-}
-
-.profile {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.page-footer {
-  clear: both;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
+/* Page Header */
 .page-header {
   display: flex;
   width: 100%;
@@ -120,15 +121,15 @@ h1 {
   text-align: right;
 }
 
-.navigation-list {
-  list-style-type: none;
+/* Page Footer */
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
-.navigation-list li {
-  display: inline-block;
-  margin-left: 30px;
-}
-
+/* Grid */
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -138,7 +139,7 @@ h1 {
 .grid__item {
   background-color: var(--grid-item-bg-c);
   border-radius: 10px;
-  transition: transform .1s ease ;
+  transition: transform .1s ease;
 }
 
 .grid__item:hover {
@@ -146,41 +147,7 @@ h1 {
   opacity: 1;
 }
 
-.button,
-button {
-  /* overwrites browser defaults and resets the border */
-  border: none;
-  display: inline-block;
-  /* takes the font from the outer container */
-  font-family: inherit;
-  /* styles the button */
-  background-color: var(--default-button-c);
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 10px;
-  /* width of the border, type, color */
-  border-bottom: 3px solid rgba(0, 0, 0, 0.3);
-}
-
-
-/* to align the about me page center */
-.about-body,
-.contact-body,
-.work-body {
-  text-align: center;
-}
-
-.FMOIcons {
-  margin: 5px;
-  transition: transform .1s ease ;
-}
-
-.FMOIcons:hover {
-  transform: scale(1.2);
-  opacity: 1;
-}
-
+/* Responsive Design */
 @media all and (max-width: 750px) {
   .grid {
     grid-template-columns: 1fr 1fr;
@@ -204,6 +171,7 @@ button {
   }
 }
 
+/* Animations */
 @keyframes color-change {
   0% {
     fill: #edc655;
@@ -215,6 +183,7 @@ button {
     fill: #f76414;
   }
 }
+
 .sun {
   animation-duration: 8s;
   animation-name: color-change;
@@ -253,10 +222,21 @@ button {
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
+/* Miscellaneous */
+.FMOIcons {
+  margin: 5px;
+  transition: transform .1s ease;
+}
+
+.FMOIcons:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
 .projects {
   display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
+  justify-content: center;
+  align-items: center;
 }
 
 .image {
@@ -279,10 +259,9 @@ button {
   width: 1000px;
 }
 
-button {
-  transition: transform .1s ease ;
-}
-
-button:hover {
-  transform: scale(1.1);
+/* Page Specific */
+.about-body,
+.contact-body,
+.work-body {
+  text-align: center;
 }
