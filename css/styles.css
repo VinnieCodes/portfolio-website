@@ -61,13 +61,7 @@ button {
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 }
 
-button:hover,
-button:focus {
-  /* lets the mouse appear as a hand when hovering over the button */
-  cursor: pointer;
-  /* reduces the opacity of the button to 80% */
-  opacity: 0.8;
-}
+
 
 .navigation-list__item--active {
   text-decoration: none;
@@ -144,7 +138,7 @@ h1 {
 .grid__item {
   background-color: var(--grid-item-bg-c);
   border-radius: 10px;
-  transition: transform .2s ease ;
+  transition: transform .1s ease ;
 }
 
 .grid__item:hover {
@@ -167,18 +161,8 @@ button {
   border-radius: 10px;
   /* width of the border, type, color */
   border-bottom: 3px solid rgba(0, 0, 0, 0.3);
-  transition: opacity 0.5s;
 }
 
-button:hover,
-button:focus,
-.button:hover,
-.button:focus {
-  /* lets the mouse appear as a hand when hovering over the button */
-  cursor: pointer;
-  /* reduces the opacity of the button to 80% */
-  opacity: 0.8;
-}
 
 /* to align the about me page center */
 .about-body,
@@ -189,7 +173,7 @@ button:focus,
 
 .FMOIcons {
   margin: 5px;
-  transition: transform .2s ease ;
+  transition: transform .1s ease ;
 }
 
 .FMOIcons:hover {
@@ -278,4 +262,27 @@ button:focus,
 .image {
   height: 240px;
   border-radius: 10px;
+}
+
+#vinnieInSun {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 1000px;
+}
+
+button {
+  transition: transform .1s ease ;
+}
+
+button:hover {
+  transform: scale(1.1);
 }
