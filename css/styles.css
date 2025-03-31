@@ -210,6 +210,13 @@ h1 {
   width: 1000px;
 }
 
+.material-symbols-outlined {
+  /* vertical-align: middle; Ensures better alignment */
+  position: relative;
+  top: 4px;
+}
+
+
 /* Page Specific */
 .about-body,
 .contact-body,
